@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <environments default="">
+    <environment id="">
+      <transactionManager type="JDBC"/>
+      <dataSource type="JNDI"> <!-- JNDI datasource라는 객체 -->
+        <property name="data_source" value="java:comp/env/jdbc/oracle"/> <!-- datasource안에 data_source라는 멤버변수  -->
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="mybatis/mapper/bbs.xml"/>
+  </mappers>
+</configuration>
+
+
+
